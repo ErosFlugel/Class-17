@@ -1,0 +1,41 @@
+/* 
+Paleta de Colores => 
+
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+ */
+
+body {
+    font-family: 'Roboto';
+    background-color:#EAC926;
+}
+
+p {
+    font-size: 12px;
+}
+
+main section h2 {
+    font-size: 24px;
+}
+
+.precios {
+    font-size: 18px;
+}
+
+.descuentos {
+    font-size: 16px;
+}
+
+.descripciones {
+    font-size: 16px;
+}
+
+.logo-img {
+    display: block;
+    width: 200px;
+}
