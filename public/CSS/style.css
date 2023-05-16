@@ -10,37 +10,80 @@ Verde: #39b54a;
 
  */
 
+ *{
+    margin: 0px;
+    padding: 0px;  
+    box-sizing: border-box;
+ }
+
 body {
     font-family: 'Roboto';
+    margin: 0;
 }
 
 /* Nav bar & Header */
 
 header {
+    width: 100%;
     background-color:#EAC926;
 }
 
-header nav {
-    display: none;
+header div.upper-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
 }
 
-header .logo-img {
-    display: block;
-    width: 10vw;
-    margin: 2rem;
+header div.upper-header div.header-container {
+    width: 100%;
+    display: flex;
+    padding-top: 1.5vh;
+    /* padding-right: 1.5vh; */
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+}
+
+header div.upper-header div.header-container img.logo-img {
+    width: 50%;
+    max-width: 200px;
+    /* margin-left: 5vw; */
+    margin-right: 30px;
 
 }
 
-header .buscador input {
-    font-size: 12px;
+header div.upper-header div.header-container div.buscador {
+    width: 50%;
+    height: 100%;
+    max-height: 45px;
+    max-width: 600px;
+}
+
+
+header div.upper-header div.header-container div.buscador form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    align-items: center;
+}
+
+header div.upper-header div.header-container div.buscador form input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 1px solid #dfdfdf;
     color: #666;
     border-radius: 0.2rem;
-    display: block;
+    text-align: left;
+    padding-left: 0.5rem;
+    margin: 0;
 }
 
-header .buscador div i {
+header div.upper-header div.header-container div.buscador form div i {
+    /* display: none; */
     background-color: #ffffffa8;
     border: 1px solid #000;
     color: #666;
@@ -48,13 +91,23 @@ header .buscador div i {
     border-radius: 2px;
 }
 
-header div p {
-    font-size: 12px;
+header div.upper-header div.head-quote {
+    order: 1;
+}
+
+header div.upper-header div.head-quote p{
+    font-size: 1.2rem;
     text-align: center;
+}
+
+header nav {
+    display: none;
 }
 
 header nav ul {
     margin-bottom: 0px;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
 header nav ul li {
@@ -62,40 +115,46 @@ header nav ul li {
 }
 
 header nav ul li a {
-    font-size: 12px;
+    font-size: 0.9rem;
     text-decoration: none;
     color: black;
 }
 
-header div.burger-menu i {
-    color: #fff;
-    background-color: #1259c3;
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px 0px 20px 0px;
-    border-radius: 5px;
-}
 header div.burger-menu {
     text-align: center;
 }
 
+header div.burger-menu i {
+    
+    color: #fff;
+    background-color: #1259c3;
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    margin: 1vh 0 2vh 0;
+    border-radius: 5px;
+}
+
+/* Wild Banner */
+section img.banner-img {
+    width: 100%;
+}
 /* productos & main section */
 
 main {
-    text-align: center;
+    /* me rompio el codigo :( */
+    margin: 0 auto;
     width: 90vw;
 }
 
-main section img.banner-img {
-    width: 100vw;
-}
 
 main section h2 {
     font-size: 24px;
+    margin: 15px 0 30px 0;
 }
 
 main section article {
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 main section article div.description {
@@ -105,26 +164,45 @@ main section article div.description {
 }
 
 main section article img{
-    width: 150px;
+    width: 100%;
 }
 
-main section article div div i {
+main section article div {
+    position: relative;
+    display: flex;
+}
+
+main section article div i {
     color: #39b54a;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
     border: 1px solid #39b54a;
-    border-radius: 100%;
-    padding: 5px 18px 18px 5px;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
-main section article .precios {
+main section article div.precios {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main section article div.precios p.precio {
     font-size: 18px;
-    margin-bottom: 2px;
-    margin-top: 2px;
+    width: 30%;
 }
 
-main section article .descuentos {
+main section article div.precios p.descuento {
     font-size: 16px;
     color: #39b54a;
-    margin-top: 2px;
+    width: 70%;
 }
 
 main section article h3 {
@@ -159,31 +237,83 @@ footer p.copyright{
     font-size: 12px;
 }
 
-.desc-prod {
-    display: none;
-}
-
-
+/* Tablets */
 
 @media (min-width: 361px) {
-
-
     main section article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    .desc-prod {
-        display: block;
+        width: 45%;
     }
 
-    header nav {
-        display: block;
+    main section div.products-1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
+
+/* Desktops */
+
+@media (min-width: 768px) {
+
+    header div.upper-header {
+        flex-wrap: nowrap;
+    }
+
+    header div.upper-header div.header-container div.buscador {
+        flex-grow: 0.9;
+    }
+
+    header div.upper-header div.head-quote {
+        flex-grow: 0.2;
+    }
+
+    header div.upper-header div.head-quote p {
+        font-size: 1rem;
+        text-align: right;
+        padding-right: 1.5rem;
     }
 
     header div.burger-menu {
         display: none;
     }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-grow: 0.2;
+        justify-content: space-between;
+    }
+
+    header nav ul li {
+        flex-grow: 0.2;
+    }
+
 }
 
-@media (min-width: 769) {
+@media (min-width: 1200px) {
 
+    header div.upper-header, header nav {
+        max-width: 1200px;
+        margin: auto;
+        align-items: center;
+    }
+
+    header div.upper-header div.header-container {
+        width: 72%;
+    }
+
+    header div.upper-header div.header-container div.buscador {
+        height: 45px;
+        flex-grow: 0.7;
+    }
+
+    main section article {
+        width: 22.5%;
+    }
 }
