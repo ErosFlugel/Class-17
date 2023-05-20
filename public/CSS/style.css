@@ -10,6 +10,11 @@ Verde: #39b54a;
 
  */
 
+/* Importing the styles from each view */
+
+@import url(register-style.css);
+@import url(login-style.css);
+
  *{
     margin: 0px;
     padding: 0px;  
@@ -26,6 +31,9 @@ body {
 header {
     width: 100%;
     background-color:#EAC926;
+    position: fixed;
+    z-index: 10;
+    top: 0;
 }
 
 header div.upper-header {
@@ -44,12 +52,30 @@ header div.upper-header div.header-container {
     justify-content: flex-start;
 }
 
-header div.upper-header div.header-container img.logo-img {
+header div.upper-header div.header-container a.logo-link {
     width: 50%;
+}
+
+header div.upper-header div.header-container a img.logo-img {
+    width: 100%;
     max-width: 200px;
     /* margin-left: 5vw; */
     margin-right: 30px;
+    position: relative;
+    animation: increase 1s ease-in infinite alternate;
+}
 
+@keyframes increase {
+    from {
+        transform: scale(1);
+        left: 0;
+        top: 0;
+    }
+    to {
+        transform: scale(1.5);
+        left: 50px;
+        top: 50px;
+    }
 }
 
 header div.upper-header div.header-container div.buscador {
@@ -134,9 +160,40 @@ header div.burger-menu i {
     border-radius: 5px;
 }
 
+/* Wild form */
+/* 
+form.create-form {
+    padding: 20px 15px;
+}
+
+form.create-form div.control-formulario {
+    margin-bottom: 15px;
+}
+
+form.create-form div.control-formulario label {
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
+}
+
+form.create-form div.control-formulario .control{
+    width: 100%;
+    padding: 8px;
+}
+
+form.create-form .boton-formulario {
+    background-color: #39b54a;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+} */
+
 /* Wild Banner */
 section img.banner-img {
     width: 100%;
+    margin-top: 192px;
 }
 /* productos & main section */
 
@@ -251,6 +308,10 @@ footer p.copyright{
         justify-content: space-around;
     }
 
+    main#formulario-registro {
+        margin-top: 188px;
+    }
+
 }
 
 /* Desktops */
@@ -292,6 +353,14 @@ footer p.copyright{
 
     header nav ul li {
         flex-grow: 0.2;
+    }
+
+    section img.banner-img {
+        margin-top: 129px;
+    }
+
+     main#formulario-registro {
+        margin-top: 129px;
     }
 
 }

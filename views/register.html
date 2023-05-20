@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- General Styling -->
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Registro</title>
+    </head>
+    <body>
+        <header>
+            <div class="upper-header">
+                <div class="header-container">
+                    <a href="/" class="logo-link"><img src="images/logo-mercado-liebre.svg" alt="logo de mercado liebre" class="logo-img" /></a>
+                    <!-- <input type="search" /> -->
+                    <div class="buscador">
+                        <form>
+                            <input type="text" name="buscador" placeholder="Buscar productos, marcas y más" aria-label="Busca aqui tus productos"></input>
+                            <div><i class="fa fa-search"></i></div>
+                        </form>
+                    </div>
+                </div>  
+                <div class="head-quote">
+                    <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Ofertas</a>
+                    </li>
+                    <li>
+                        <a href="#">Tiendas Oficiales</a>
+                    </li>
+                    <li>
+                        <a href="#">Vender</a>
+                    </li>
+                    <li>
+                        <a href="#">Ayuda</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="/registro">Creá tu cuenta</a> <i class="far fa-id-card"></i>
+                    </li>
+                    <li>
+                        <a href="/login">Ingresá</a> <i class="fas fa-sign-in-alt"></i>
+                    </li>
+                    <li>
+                        <a href="#">Mis Compras <i class="fas fa-shopping-basket"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="burger-menu"><i class="fa fa-bars burger"></i></div>
+        </header>
+        <main id="formulario-registro">
+            <form action="/" method="GET" class="formularios">
+                <section class="personal-data">
+                    <div class="text-field">
+                        <input type="text" name="name" placeholder="Nombre y Apellido" class="input-text"/>
+                    </div>
+                    <div class="text-field">
+                        <input type="text" name="user" placeholder="Nombre de Usuario" class="input-text"/>
+                    </div>
+                    <div class="text-field">
+                        <input type="email" name="email" id="email" placeholder="E-mail" class="input-text"/>
+                    </div>
+                    <div class="text-field">
+                        <input type="password" name="password" placeholder="Contraseña" class="input-text"/>
+                    </div>
+                    <div class="text-field">
+                        <input type="password" name="confirmed-password" placeholder="Confirmar Contraseña" class="input-text"/>
+                    </div>
+                </section>
+                <h3>Fecha de nacimiento</h3>
+                <section class="addressBirth">
+                    <div class="text-field">
+                        <input type="date" name="birth" class="input-text"/>
+                    </div>
+                    <div class="text-field">
+                        <input type="text" name="address" placeholder="Domicilio" class="input-text"/>
+                    </div>
+                </section>
+                <h3>Perfil de Usuario</h3>
+                <section class="userType">
+                        <input type="radio" name="user-profile" id="buyer"  value="buy" />
+                        <label for="buyer">Comprador</label>
+                        <input type="radio" name="user-profile" id="seller"  value="sel" />
+                        <label for="seller">Vendedor</label>
+                </section>
+                <h3>Intereses</h3>
+                <section class="customOptions">
+                    <div>
+                        <input type="checkbox" name="interest" value="electro" id="electro" />
+                        <label for="electro">Electro</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="interest" value="moda" id="moda" />
+                        <label for="moda">Moda</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="interest" value="hogar" id="hogar" />
+                        <label for="hogar">Hogar</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="interest" value="jugueteria" id="jugueteria" />
+                        <label for="jugueteria">Jugueteria</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="interest" value="vida-sana" id="vida-sana" />
+                        <label for="vida-sana">Vida Sana</label>
+                    </div>
+                </section>
+                <div class="pic-file-container">
+                    <label for="user-picture">Foto de Usuario</label>
+                    <input type="file" name="userPhoto" id="user-picture" />
+                </div>
+                <button type="submit" class="boton-submit">Guardar<button>
+                <button type="reset" class="boton-reset">Borrar</button>
+            </form>
+        </main>
+    </body>
+</html>

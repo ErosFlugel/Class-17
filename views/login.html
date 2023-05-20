@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- General Styling -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="upper-header">
+            <div class="header-container">
+                <a href="/" class="logo-link"><img src="images/logo-mercado-liebre.svg" alt="logo de mercado liebre" class="logo-img" /></a>
+                <!-- <input type="search" /> -->
+                <div class="buscador">
+                    <form>
+                        <input type="text" name="buscador" placeholder="Buscar productos, marcas y más" aria-label="Busca aqui tus productos"></input>
+                        <div><i class="fa fa-search"></i></div>
+                    </form>
+                </div>
+            </div>  
+            <div class="head-quote">
+                <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Ofertas</a>
+                </li>
+                <li>
+                    <a href="#">Tiendas Oficiales</a>
+                </li>
+                <li>
+                    <a href="#">Vender</a>
+                </li>
+                <li>
+                    <a href="#">Ayuda</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/registro">Creá tu cuenta</a> <i class="far fa-id-card"></i>
+                </li>
+                <li>
+                    <a href="/login">Ingresá</a> <i class="fas fa-sign-in-alt"></i>
+                </li>
+                <li>
+                    <a href="#">Mis Compras <i class="fas fa-shopping-basket"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="burger-menu"><i class="fa fa-bars burger"></i></div>
+    </header>
+    <main class="login-view">
+        <form action="/" method="GET" class="login-form">
+            <div class="text-field">
+                <input type="text" name="loginUser" placeholder="Nombre de Usuario" class="input-text">
+            </div>
+            <div class="text-field">
+                <input type="text" name="loginPassword" placeholder="Contraseña" class="input-text">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <section class="product-test">
+        <img src="images/iphone-11.jpg" alt="imagen comercial de un iphone 11">
+        <h2>Iphone 11</h2>
+    </section>
+</body>
+</html>
