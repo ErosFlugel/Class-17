@@ -1,5 +1,5 @@
 main#formulario-registro {
-    background-color: #f0f0f0;
+    background-color: #ebebeb;
     margin-top: 209px;
 }
 
@@ -89,19 +89,24 @@ main#formulario-registro form.formularios div.pic-file-container {
     align-self: center;
 }
 
-
 /* Botones */
 
-main#formulario-registro form.formularios button {
+main#formulario-registro form.formularios div.button-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+main#formulario-registro form.formularios div.button-section button {
     width: 40%;
+    background-color: rgb(35, 35, 207);
+    color: #ebebeb;
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 0.2rem;
+    box-shadow: 0px 1px 2px #000;
 }
 
-main#formulario-registro form.formularios button.boton-submit{
-    background-color: green;
-    color: #ebebeb;
-}
-
-main#formulario-registro form.formularios  button.boton-reset{
-    background-color: red;
-    color: #ebebeb;
+main#formulario-registro form.formularios div.button-section button:hover{
+    background-color: #0022AA;
+    cursor: pointer;
 }

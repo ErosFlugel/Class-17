@@ -24,6 +24,7 @@ Verde: #39b54a;
 body {
     font-family: 'Roboto';
     margin: 0;
+    background-color: #ebebeb;
 }
 
 /* Nav bar & Header */
@@ -62,7 +63,7 @@ header div.upper-header div.header-container a img.logo-img {
     /* margin-left: 5vw; */
     margin-right: 30px;
     position: relative;
-    animation: increase 1s ease-in infinite alternate;
+    /* animation: increase 1s ease-in infinite alternate; */
 }
 
 @keyframes increase {
@@ -212,26 +213,27 @@ main section h2 {
 main section article {
     margin-bottom: 10px;
     margin-left: 10px;
-}
-
-main section article div.description {
-    padding: 15px;
-    border-top: 1px solid #ebebeb;
-    text-align: left;;
+    transition: all 1000ms
 }
 
 main section article img{
     width: 100%;
 }
 
-main section article div {
+main section article div.description {
     position: relative;
     display: flex;
+    padding: 15px;
+    /* border-top: 1px solid #ebebeb; */
+    text-align: left;
+    background-color: #fff;
 }
 
-main section article div i {
-    color: #39b54a;
+
+main section article div.description i {
+    position: absolute;
     display: block;
+    color: #39b54a;
     font-size: 16px;
     padding: 5px;
     width: 30px;
@@ -239,13 +241,14 @@ main section article div i {
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: absolute;
     right: 20px;
     top: -15px;
+    transition: all 1000ms;
 }
 
-main section article div.precios {
+main section article div.description div.precios {
     display: flex;
+    justify-content: left;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
@@ -260,32 +263,41 @@ main section article div.precios p.descuento {
     font-size: 16px;
     color: #39b54a;
     width: 70%;
+    padding-left: 10px;
 }
 
-main section article h3 {
+main section article div.precios h3 {
     font-size: 16px;
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    transition: all 400ms;
 }
 
 /* Footer */
 
-footer article {
-    text-align: center;
+footer section{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
 }
 
-footer article div i {
+footer section article {
+    text-align: center;
+    padding-top: 10px;
+}
+
+footer section article div i {
     font-size: 2em;
     color: #1259c3;
     margin-bottom: 10px;
 }
 
-footer article h3 {
+footer section article h3 {
     font-size: 16px;
     margin-bottom: 1px;
     margin-top: 0px;
 }
 
-footer article p {
+footer section article p {
     font-size: 12px;
     margin-top: 1px;
 }
@@ -298,7 +310,6 @@ footer p.copyright{
 
 @media (min-width: 361px) {
     main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 45%;
     }
 
@@ -361,6 +372,31 @@ footer p.copyright{
 
      main#formulario-registro {
         margin-top: 129px;
+    }
+
+    div.description div.precios h3{
+        /* display: none; */
+        opacity: 0;
+    }
+
+    main section article:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    article:hover div.precios h3 {
+        height: 35px;
+        margin-top: 10px;
+        /* display: block; */
+        opacity: 1;
+    }
+
+    article:hover div.description i {
+        transform: rotate(630deg);
+    }
+
+    footer section{
+        flex-direction: row;
+        justify-content: center;
     }
 
 }

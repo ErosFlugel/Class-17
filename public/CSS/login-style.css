@@ -16,6 +16,11 @@ main form.login-form button{
     background-color: blue;
     border: none;
     border-radius: 0.3rem;
+    transition: all 500ms;
+}
+
+main form.login-form button:hover {
+    background-color: #0022AA;
 }
 
 section.product-test {
