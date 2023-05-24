@@ -21,7 +21,10 @@ main form.login-form button{
 
 main form.login-form button:hover {
     background-color: #0022AA;
+    cursor: pointer;
 }
+
+/* Estilos de practica del playground no entregables para el proyecto */
 
 section.product-test {
     margin: 50px 15px;
