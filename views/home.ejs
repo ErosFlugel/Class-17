@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs', {title: 'Mercado Liebre'}) %>
+    <body>
+        <%- include('partials/header.ejs') %>
+        <section>
+            <img  class="banner-img" src="images/img-home-banner.jpg" alt="banner del e-commerce"/>
+        </section>
+        <main>
+            <% for (let i = 0; i < sections.length; i++) { %>
+                <section>
+                    <h2><%=sections[i].title%></h2>
+
+                    <div class="products-1">
+                        <% for (let i = 0; i < products.length; i++) { %>
+                            <article>
+                                <img src=<%=products[i].img %> alt= <%=products[i].alt %> class="product-img" />
+                                <div class="description">
+                                    <i class="fa-solid fa-truck"></i>
+                                    <div class="precios">
+                                        <p class="precio">$<%=products[i].price %></p>
+                                        <p class="descuento"><%=products[i].discount %>% off</p>
+                                    </div>
+                                    <h3><%=products[i].title %></h3>
+                                </div>
+                            </article>
+                        <% } %>
+                    </div>
+                </section>
+            <% } %>
+        </main>
+        <footer>
+            <section>
+                <% footer.forEach( row => { %>
+                    <article>
+                        <div><i class="fa-solid <%=row.class%>"></i></div>
+                        <h3><%=row.title%></h3>
+                        <p><%=row.description%></p>
+                    </article>
+                <% }) %>
+            </section>
+            <p class="copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+        </footer>
+        <script src="https://kit.fontawesome.com/ffa4779421.js" crossorigin="anonymous"></script>
+    </body>
+</html>
